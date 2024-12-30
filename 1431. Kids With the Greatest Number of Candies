@@ -1,0 +1,16 @@
+class Solution:
+    def kidsWithCandies(self,candies,extracandies):
+        max_value=max(candies)
+        out=[]
+        for i in candies:
+            if (i+ extracandies) >= max_value:
+                out.append(True)
+            else:
+                out.append(False)
+
+        return out
+                
+        
+s=Solution()
+output=s.kidsWithCandies([2,3,5,1,3],3)
+print(output)
